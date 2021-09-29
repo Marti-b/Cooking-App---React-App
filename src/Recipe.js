@@ -11,9 +11,9 @@ function Recipe(props){
         <h5> Recipe difficulty: {recipe.cookingTime < 25 ? "Easy" : "Hard"}</h5>
         
 
-        <p>Ingredients: {recipe.ingredients?.map((ingredient) => {
+        <p>Ingredients: {recipe.ingredients?.map((ingredient, index) => {
             return(
-                <li><Link to={`/with/${ingredient}`}> {ingredient} </Link></li>
+                <li key={index}><Link to={`/with/${ingredient}`}> {ingredient} </Link></li>
             )
         })}</p>
 

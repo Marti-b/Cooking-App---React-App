@@ -1,5 +1,5 @@
 import { Link } from "@reach/router";
-import App from "./App";
+
 
 function Recipes(props){
 console.log("Recipies props" , props)
@@ -29,7 +29,7 @@ if (props.ingredient){
                 {
                     recipesToShow.map((item) => {
                         return(
-                          <li><Link to={`/recipe/${item.uniqueId}`}> {item.title} </Link></li>
+                          <li key={item.uniqueId}><Link to={`/recipe/${item.uniqueId}`}> {item.title} </Link></li>
                         )
                     })
                 } 

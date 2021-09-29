@@ -37,7 +37,18 @@ function App() {
          description: desc,
          ingredients: ingr
       }
-      setList((currentRecipes) => [...currentRecipes, newRecipe]);
+      fetch(API_URL, {
+         method: 'PUT',
+         headers: {
+            'Content-Type': 'application/json',
+         },
+         body: JSON.stringify([...listOfRecipes, newRecipe])
+      })
+      .then(response => response.json())
+      .then(data => setList(data.record))
+      .catch((error) => {
+        console.error('Error:', error);
+      });
    }
 
   return (
