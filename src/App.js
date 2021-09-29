@@ -10,6 +10,7 @@ function App() {
 
   const API_URL = "https://api.jsonbin.io/b/6149cc24aa02be1d444c4014"
   const [listOfRecipes, setList] = useState([]);
+  
 //     { uniqueId: 1, title: 'Goulash',  description: 'How to make Goulash. STEP 1 Coat the meat in the seasoned flour. Heat the oil in a frying pan and fru the onion, pepper, carrot and celery. Add the meat and fry until browned.', ingredients: ['potato', 'meat', 'onion', 'paprika'], cookingTime: 125},
 //     { uniqueId: 2, title: 'Csirkepaprikás', description: 'How to make CsirkePaprikás',  ingredients: ['dumplings', 'chicken', 'paprika'], cookingTime: 55},
 //     { uniqueId: 3, title: 'Bolognese', description: 'You start with choping the...', ingredients: ['beef', 'pasta', 'tomato'], cookingTime: 45},
@@ -43,7 +44,7 @@ function App() {
    <>
    <nav>
      <Link to="/">Home</Link>
-     {/* <Link to="/add">AddRecipe</Link> */}
+ 
   </nav>
      <div className="App">
        <Router >
